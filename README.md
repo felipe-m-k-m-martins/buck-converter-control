@@ -29,11 +29,11 @@ The research context is leak detection in dams with distributed fiber-optic temp
 
 Cascaded control on the averaged model of the converter:
 
-- **Inner current loop:** the duty-to-inductor-current plant is close to an integrator, Vin/(L s). A PI sets the crossover near one tenth of the switching frequency, 2 kHz at 20 kHz.
+- **Inner current loop:** the duty-to-inductor-current plant is close to an integrator, Vin/(L s). A PI sets the crossover near one tenth of the switching frequency: 2 kHz at 20 kHz and 5 kHz at 50 kHz.
 - **Outer voltage loop:** with the current loop closed, the plant seen by the voltage loop is close to a first-order system, 1/(C s + 1/R). A PI sets the crossover near 400 Hz, five times slower than the current loop, and its zero cancels the RC pole.
 - **Saturation:** the duty cycle is limited to its valid range and the integrators stop accumulating while it is saturated (anti-windup).
 
-Example gains from the analytic design, for L = 220 µH, C = 470 µF and R = 1 Ω:
+Worked example from the analytic design, with L = 220 µH, C = 470 µF, R = 1 Ω and a 2 kHz current-loop crossover (example values from the report, not one of the three operating points above):
 
 | Loop | Kp | Ki |
 |---|---|---|
@@ -82,7 +82,7 @@ The signal conditioning chain follows the GBOX voltage and current measurement b
 
 ```
 analysis/buck_cascade_design.m   cascaded PI design and simulation (MATLAB)
-analysis/buck_plants.m           duty-to-current and duty-to-voltage plants (MATLAB)
+analysis/buck_plants.m           duty-to-current and duty-to-voltage plants (MATLAB, with L = 330 µH)
 analysis/verify_cascade.py       check of the analytic gains (Python)
 hardware/measurement-board/      schematic, PCB layout, Gerber files and BOM
 images/                          plots and board images
