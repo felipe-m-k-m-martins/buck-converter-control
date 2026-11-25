@@ -48,7 +48,7 @@ Check of these gains on the linear averaged model (`analysis/verify_cascade.py`,
 | Voltage loop phase margin | 90° at 400 Hz |
 | 0 to 12 V reference step | 0.04 % overshoot, 1.5 ms settling time (2 %) |
 
-The MATLAB script `analysis/buck_cascade_design.m` repeats the analysis with gains tuned by `pidtune` (Bode, Nyquist, root locus, step and ramp responses, simulation with duty saturation). The plots below come from the MATLAB analysis scripts.
+The MATLAB script `analysis/buck_cascade_design.m` repeats the analysis with gains tuned by `pidtune` (Bode, Nyquist, root locus, step and ramp responses, simulation with duty saturation). The plots below come from that script. Its `pidtune` gains are different from the analytic ones above, so its simulated step settles in about 0.1 s instead of 1.5 ms.
 
 | Root locus, current loop | Root locus, voltage loop |
 |---|---|
