@@ -66,11 +66,11 @@ Board that measures the DC voltage and current at the converter load and sends b
 
 - **Voltage channel:** 0 to 40 V. Resistive divider, galvanic isolation with an HCPL-7520 isolation amplifier, and an op-amp stage (TLV2471) that scales the output to 0 to 3 V.
 - **Current channel:** 0 to 40 A. LA55-P Hall-effect closed-loop transducer with a 75 Ω burden resistor, and an op-amp stage that scales the output to 0 to 3 V.
-- **Supplies:** HLK-PM05 and HLK-PM15 AC-DC modules fed from the mains input through a fuse, a varistor and a common-mode choke, with separate supplies for the voltage and current channels and AMS1117 3.3 V regulators.
+- **Supplies:** HLK-PM05 and HLK-PM15 AC-DC modules fed from the mains input, protected by fuses and varistors and filtered by an input inductor, with separate supplies for the voltage and current channels and AMS1117 3.3 V regulators.
 - **Output protection:** BAT54S diodes clamp both outputs to the 0 to 3.3 V range.
-- **Board:** 140 x 100 mm, two layers, with test pads on every signal and supply and indicator LEDs on the supply rails.
+- **Board:** 140 x 100 mm, two layers, with 19 test pads on the signals and supplies and eight indicator LEDs.
 
-The signal conditioning chain follows the voltage and current measurement boards of the GESEP group at the Federal University of Viçosa (GBOX project, 2021), adapted to the ranges and sensors of this project.
+The signal conditioning chain follows the GBOX voltage and current measurement boards of the GESEP group (Allan Fagner Cupertino, Dayane do Carmo Mendonça and William Caires Silva Amorim, 2021), adapted to the ranges and sensors of this project.
 
 ![Schematic of the measurement board](images/measurement-board-schematic.png)
 
