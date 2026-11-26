@@ -102,5 +102,5 @@ Research supervised by Prof. Renata Oliveira de Sousa (UTFPR). The research repo
 
 ## Author
 
-Felipe Martins, Mechatronics Engineering student at UTFPR, double degree at ENSTA Bretagne.
+Felipe Martins, Mechatronics Engineering student at UTFPR, double degree at ENSTA.
 [LinkedIn](https://www.linkedin.com/in/felipe-m-k-m-martins)
