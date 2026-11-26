@@ -100,6 +100,10 @@ Comments in the MATLAB scripts are in Portuguese.
 
 Research supervised by Prof. Renata Oliveira de Sousa (UTFPR). The research report was written by Felipe Martins and Gabriela Bosco Azevedo.
 
+## Attribution and usage
+
+This repository is shared for portfolio and educational purposes. It comes from undergraduate research supervised by Prof. Renata Oliveira de Sousa, and the research report was written by Felipe Martins and Gabriela Bosco Azevedo. No license is granted for reuse or redistribution of the scripts, board files, images or text. If you want to use any of it, please contact me on [LinkedIn](https://www.linkedin.com/in/felipe-m-k-m-martins).
+
 ## Author
 
 Felipe Martins, Mechatronics Engineering student at UTFPR, double degree at ENSTA.
