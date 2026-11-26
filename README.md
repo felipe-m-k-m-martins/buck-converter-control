@@ -13,7 +13,7 @@ The research context is leak detection in dams with distributed fiber-optic temp
 - Load: corrugated steel tape of the cable, modeled from its geometry and resistivity, about 1 Ω over 12 m at operating temperature
 - Input: 24 V battery bank
 - Three operating points: 1, 5 and 10 W/m, that is 12, 60 and 120 W
-- Ripple limits: 5 % on the inductor current, 1 % on the output voltage
+- Ripple limits: 5% on the inductor current, 1% on the output voltage
 - Switching frequency: 20 kHz (12 and 60 W) and 50 kHz (120 W)
 
 | Operating point | 1 W/m | 5 W/m | 10 W/m |
@@ -30,7 +30,7 @@ The research context is leak detection in dams with distributed fiber-optic temp
 Cascaded control on the averaged model of the converter:
 
 - **Inner current loop:** the duty-to-inductor-current plant is close to an integrator, Vin/(L s). A PI sets the crossover near one tenth of the switching frequency: 2 kHz at 20 kHz and 5 kHz at 50 kHz.
-- **Outer voltage loop:** with the current loop closed, the plant seen by the voltage loop is close to a first-order system, 1/(C s + 1/R). A PI sets the crossover near 400 Hz, five times slower than the current loop, and its zero cancels the RC pole.
+- **Outer voltage loop:** with the current loop closed, the plant seen by the voltage loop is close to a first-order system, 1/(C s + 1/R). A PI sets the crossover five times below the current loop (400 Hz for a 2 kHz current loop), and its zero cancels the RC pole.
 - **Saturation:** the duty cycle is limited to its valid range and the integrators stop accumulating while it is saturated (anti-windup).
 
 Worked example from the analytic design, with L = 220 µH, C = 470 µF, R = 1 Ω and a 2 kHz current-loop crossover (example values from the report, not one of the three operating points above):
@@ -46,7 +46,7 @@ Check of these gains on the linear averaged model (`analysis/verify_cascade.py`,
 |---|---|
 | Current loop phase margin | 51.8° at 2.5 kHz |
 | Voltage loop phase margin | 90° at 400 Hz |
-| 0 to 12 V reference step | 0.04 % overshoot, 1.5 ms settling time (2 %) |
+| 0 to 12 V reference step | 0.04% overshoot, 1.5 ms settling time (2%) |
 
 The MATLAB script `analysis/buck_cascade_design.m` repeats the analysis with gains tuned by `pidtune` (Bode, Nyquist, root locus, step and ramp responses, simulation with duty saturation). The plots below come from that script. Its `pidtune` gains are different from the analytic ones above, so its simulated step settles in about 0.1 s instead of 1.5 ms.
 
